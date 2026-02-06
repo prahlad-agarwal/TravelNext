@@ -19,18 +19,18 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
+    origin: function(origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS not allowed"));
       }
-      return callback(new Error("CORS not allowed"));
     },
     credentials: true,
   }),
 );
 
-app.options("*", cors());
+
 
 const PORT = process.env.SERVER_PORT || 8000;
 
