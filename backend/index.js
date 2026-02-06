@@ -9,17 +9,12 @@ import dbConnect from "./config/db.js";
 import userRoute from "./routes/user.route.js";
 import bookingRoute from "./routes/booking.route.js";
 
-  const allowedOrigins = [
-    "http://localhost:5173",
-    "https://travelnext-frontend-folder.onrender.com"
-    ];
-
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
