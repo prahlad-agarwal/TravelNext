@@ -4,7 +4,7 @@ import { useState } from "react";
 export const authDataContext = createContext();
 
 export const AuthContext = ({ children }) => {
-  const serverUrl = "https://travelnext-backend-folder.onrender.com";
+  const serverUrl = "http://localhost:8080";
 
   const [loading, setLoading] = useState(false);
 
