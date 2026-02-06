@@ -9,12 +9,14 @@ import dbConnect from "./config/db.js";
 import userRoute from "./routes/user.route.js";
 import bookingRoute from "./routes/booking.route.js";
 
+  
+
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://travelnext-frontend-folder.onrender.com/",
+    origin: "https://travelnext-frontend-folder.onrender.com",
     credentials: true,
   })
 );
