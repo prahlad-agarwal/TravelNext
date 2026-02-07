@@ -9,8 +9,8 @@ const getToken = async (userId, res) => {
     // save token in the cookie
     res.cookie("token", token, {
       httpOnly: true,
-      // secure: (process.env.NODE_ENVIRONMENT = "production"),
-      sameSite: "strict",
+      secure: true,
+      sameSite: "none",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
   } catch (error) {
