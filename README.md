@@ -230,5 +230,5 @@ npm run dev
 **Prahlad Agarwal**
 
 📧 Email: prahladagarwal575@gmail.com  
-🔗 LinkedIn:  
+🔗 Live Preview: https://travelnext-frontend-folder-rvvm.onrender.com  
 🔗 GitHub: https://github.com/prahlad-agarwal/TravelNext
